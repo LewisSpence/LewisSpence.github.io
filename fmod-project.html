@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -10,210 +9,7 @@
 
 <title>Interactive Game Audio | Lewis Spence</title>
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-
-background:#121212;
-
-color:#eeeeee;
-
-font-family:
-"Segoe UI",
-Arial,
-Helvetica,
-sans-serif;
-
-line-height:1.8;
-
-}
-
-.container{
-
-width:min(1000px,90%);
-margin:auto;
-
-}
-
-header{
-
-padding:80px 0 60px;
-
-}
-
-.subtitle{
-
-color:#9fa4ad;
-
-font-size:20px;
-
-margin-top:10px;
-
-}
-
-.intro{
-
-margin-top:30px;
-
-font-size:18px;
-
-color:#d4d4d4;
-
-max-width:800px;
-
-}
-
-section{
-
-margin:70px 0;
-
-}
-
-h1{
-
-font-size:46px;
-
-}
-
-h2{
-
-font-size:30px;
-
-margin-bottom:25px;
-
-}
-
-.card{
-
-background:#1c1c1c;
-
-border:1px solid #303030;
-
-border-radius:12px;
-
-padding:30px;
-
-}
-
-.grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-gap:20px;
-
-}
-
-.highlight{
-
-background:#181818;
-
-border:1px solid #2d2d2d;
-
-border-radius:10px;
-
-padding:20px;
-
-transition:.25s;
-
-}
-
-.highlight:hover{
-
-border-color:#2b6fff;
-
-transform:translateY(-3px);
-
-}
-
-.highlight h3{
-
-margin-bottom:10px;
-
-font-size:18px;
-
-}
-
-.highlight p{
-
-color:#c8c8c8;
-
-font-size:15px;
-
-}
-
-iframe{
-
-width:100%;
-
-aspect-ratio:16/9;
-
-border:none;
-
-border-radius:12px;
-
-margin-top:20px;
-
-}
-
-.button{
-
-display:inline-block;
-
-padding:14px 22px;
-
-background:#2b6fff;
-
-color:white;
-
-text-decoration:none;
-
-border-radius:8px;
-
-margin-top:20px;
-
-transition:.2s;
-
-}
-
-.button:hover{
-
-background:#4b84ff;
-
-}
-
-footer{
-
-padding:80px 0;
-
-text-align:center;
-
-color:#888;
-
-}
-
-ul{
-
-padding-left:20px;
-
-color:#d0d0d0;
-
-}
-
-li{
-
-margin-bottom:12px;
-
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -223,7 +19,9 @@ margin-bottom:12px;
 
 <header>
 
-<h1>Interactive Game Audio Implementation</h1>
+<div class="hero">
+
+<h1>Interactive Game Audio</h1>
 
 <p class="subtitle">
 
@@ -231,81 +29,98 @@ FMOD Studio • Adaptive Music • Technical Sound Design
 
 </p>
 
-<p class="intro">
+<p>
 
-This project explored the implementation of interactive audio systems for a conceptual top-down action game. Every sound effect, ambience layer and music system was designed before being implemented within FMOD Studio to create a responsive, non-linear audio experience.
+A technical sound design project exploring adaptive music, interactive ambience and parameter-driven audio implementation using FMOD Studio.
 
 </p>
+
+</div>
 
 </header>
 
+
 <section>
 
-<h2>Overview</h2>
+<div class="video">
+
+<video controls poster="images/fmod-thumbnail.jpg">
+
+<source src="videos/fmod-demo.mp4" type="video/mp4">
+
+Your browser does not support HTML5 video.
+
+</video>
+
+<h3>Project Demonstration</h3>
+
+<p>
+
+This demonstration showcases the implemented adaptive music system, dynamic ambience, environmental transitions and parameter-driven audio behaviours. The project received an overall mark of <strong>83%</strong>.
+
+</p>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>About the Project</h2>
 
 <div class="card">
 
 <p>
 
-The objective was to demonstrate how interactive audio can react dynamically to gameplay conditions instead of relying on traditional linear playback. The project received an overall mark of <strong>83%</strong>, with particularly positive feedback on the implementation of adaptive music and environmental audio systems.
+This project was created as part of my BSc Music Technology degree and focused on designing an interactive audio system for a conceptual top-down action game. Every sound effect, ambience layer and musical element was created before being implemented in FMOD Studio using non-linear playback and gameplay-driven parameters.
 
 </p>
 
 </div>
 
 </section>
+
 
 <section>
 
-<h2>Technical Highlights</h2>
+<h2>Technical Showcase</h2>
 
-<div class="grid">
+<div class="feature-showcase">
 
-<div class="highlight">
+<div class="feature">
 
-<h3>Adaptive Music</h3>
+<div class="feature-image-wrapper">
 
-<p>
-
-Battle music changes according to player health, enemy count and game progression, creating a soundtrack that evolves naturally throughout gameplay.
-
-</p>
+<img id="feature-image" src="" alt="">
 
 </div>
 
-<div class="highlight">
+<div class="feature-content">
 
-<h3>Dynamic Ambience</h3>
+<h3 id="feature-title"></h3>
 
-<p>
+<p id="feature-description"></p>
 
-Environmental audio continuously varies through randomised traffic, emergency vehicles, weather changes and other ambient events.
-
-</p>
+<div id="carousel-dots"></div>
 
 </div>
 
-<div class="highlight">
-
-<h3>Environmental Transitions</h3>
-
-<p>
-
-Location-based filtering allows seamless movement between gameplay spaces, including transitions into enclosed environments.
-
-</p>
-
 </div>
 
-<div class="highlight">
+<div class="feature-buttons">
 
-<h3>FMOD Implementation</h3>
+<button id="previous-button" class="carousel-button">
 
-<p>
+← Previous
 
-All systems were implemented using parameter-driven events and non-linear playback within FMOD Studio.
+</button>
 
-</p>
+<button id="next-button" class="carousel-button">
+
+Next →
+
+</button>
 
 </div>
 
@@ -313,65 +128,90 @@ All systems were implemented using parameter-driven events and non-linear playba
 
 </section>
 
-<section>
-
-<h2>Project Demonstration</h2>
-
-<div class="card">
-
-<p>
-
-The following video demonstrates the implemented systems. It was originally produced for a university assessment and showcases the project's functionality and implementation.
-
-</p>
-
-<iframe
-
-src="https://www.youtube.com/embed/gFK0D_Rjygc"
-
-allowfullscreen>
-
-</iframe>
-
-</div>
-
-</section>
 
 <section>
 
 <h2>Development Process</h2>
 
-<div class="card">
+<div class="timeline">
 
-<ul>
+<div class="timeline-item">
 
-<li>Designed a complete audio asset list covering gameplay, UI, ambience and music.</li>
+<h3>Planning</h3>
 
-<li>Created original sound effects and musical assets in Ableton Live.</li>
+<p>
 
-<li>Implemented all assets within FMOD Studio.</li>
+Identified every required gameplay, UI, ambience and music asset before production.
 
-<li>Built adaptive music behaviours using gameplay parameters.</li>
+</p>
 
-<li>Designed non-linear ambience systems with randomised playback.</li>
+</div>
 
-<li>Tested and refined transitions for consistent playback behaviour.</li>
+<div class="timeline-item">
 
-</ul>
+<h3>Sound Design</h3>
+
+<p>
+
+Produced original sound effects and adaptive musical material using Ableton Live.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>FMOD Implementation</h3>
+
+<p>
+
+Implemented events, parameters and non-linear playback systems within FMOD Studio.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>Testing & Refinement</h3>
+
+<p>
+
+Balanced transitions, refined parameter behaviour and tested playback consistency.
+
+</p>
+
+</div>
 
 </div>
 
 </section>
 
+
 <section>
 
-<h2>Key Takeaways</h2>
+<h2>Software Used</h2>
+
+<div class="skills">
+
+<div class="skill"><img src="images/fmod.png" alt="FMOD"></div>
+
+<div class="skill"><img src="images/ableton.jpg" alt="Ableton"></div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>What I Learned</h2>
 
 <div class="card">
 
 <p>
 
-This project significantly strengthened my understanding of interactive audio implementation, adaptive music systems and parameter-driven sound design. It also reinforced the importance of planning scalable audio structures before implementation, particularly when designing systems intended to respond dynamically to gameplay events.
+This project significantly improved my understanding of interactive audio implementation, adaptive music systems and scalable sound design. It also reinforced the importance of planning audio architectures before implementation to create flexible systems capable of responding naturally to gameplay.
 
 </p>
 
@@ -385,13 +225,69 @@ This project significantly strengthened my understanding of interactive audio im
 
 </section>
 
+
 <footer>
 
-Lewis Spence • Technical Audio Designer
+Lewis Spence
+
+<br><br>
+
+Game Audio • Technical Sound Design • Audio Production
 
 </footer>
 
 </div>
+
+
+<script>
+
+const slides=[
+
+{
+
+title:"Adaptive Music",
+
+image:"images/adaptive.jpg",
+
+description:"Music intensity responds dynamically to gameplay variables including player health, enemy count and progression, allowing the soundtrack to evolve naturally during play."
+
+},
+
+{
+
+title:"Dynamic Ambience",
+
+image:"images/ambience.jpg",
+
+description:"Environmental ambience is built from randomised events including traffic, weather and distant emergency vehicles, reducing repetition and creating a more believable world."
+
+},
+
+{
+
+title:"Environmental Transitions",
+
+image:"images/transitions.jpg",
+
+description:"Interior and exterior environments are connected using parameter-driven filtering and seamless ambience transitions."
+
+},
+
+{
+
+title:"FMOD Implementation",
+
+image:"images/fmod-ui.jpg",
+
+description:"The entire audio system was implemented in FMOD Studio using event hierarchies, parameters and non-linear playback techniques."
+
+}
+
+];
+
+</script>
+
+<script src="script.js"></script>
 
 </body>
 
