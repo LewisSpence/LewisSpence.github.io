@@ -185,23 +185,71 @@ section{
 
 .skills{
 
-    display:flex;
+    display:grid;
 
-    flex-wrap:wrap;
+    grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
 
-    gap:12px;
+    gap:25px;
+
+    margin-top:20px;
 
 }
 
 .skill{
 
+    background:#1b1b1b;
+
+    border:1px solid #2c2c2c;
+
+    border-radius:12px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:90px;
+
+    transition:.25s;
+
+}
+
+.skill:hover{
+
+    border-color:#2b6fff;
+
+    transform:translateY(-4px);
+
     background:#202020;
 
-    border:1px solid #383838;
+}
 
-    border-radius:30px;
+.skill img{
 
-    padding:10px 18px;
+    width:60px;
+
+    height:60px;
+
+    object-fit:contain;
+
+    filter:grayscale(100%);
+
+    opacity:.8;
+
+    transition:.25s;
+
+}
+
+.skill:hover img{
+
+    filter:none;
+
+    opacity:1;
+
+    transform:scale(1.08);
+
+}
 
 }
 
@@ -360,15 +408,14 @@ Technical Skills
 
 <div class="skills">
 
-    <img src="images/fmod.png" alt="FMOD Studio">
-    <img src="images/ableton.jpg" alt="Ableton Live">
-    <img src="images/protools.png" alt="Pro Tools">
-    <img src="images/logic.png" alt="Logic Pro">
-    <img src="images/reaper.jpg" alt="Reaper">
-    <img src="images/izotope.png" alt="iZotope RX">
-    <img src="images/fabfilter.png" alt="FabFilter">
-    <img src="images/melodyne.png" alt="Melodyne">
-    <img src="images/maxforlive.jpg" alt="Max for Live">
+<div class="skill"><img src="images/fmod.png"></div>
+<div class="skill"><img src="images/ableton.jpg"></div>
+<div class="skill"><img src="images/logic.png"></div>
+<div class="skill"><img src="images/reaper.jpg></div>
+<div class="skill"><img src="images/izotope.png"></div>
+<div class="skill"><img src="images/fabfilter.png"></div>
+<div class="skill"><img src="images/melodyne.png"></div>
+<div class="skill"><img src="images/maxforlive.jpg"></div>
 
 </div>
 
