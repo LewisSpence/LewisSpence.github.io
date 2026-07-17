@@ -7,7 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MAX4LIVE WIP | Lewis Spence</title>
+<title>Expansive Width | Lewis Spence</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -25,14 +25,14 @@
 
 <p class="subtitle">
 
-FMOD Studio • Adaptive Music • Technical Sound Design
+Audio Plugin Development • Digital Signal Processing • Stereo Imaging
 
 </p>
 
-<p>
-
-A technical sound design project exploring adaptive music, interactive ambience and parameter-driven audio implementation using FMOD Studio.
-
+<p> <strong>A custom stereo widening audio plugin built to create immersive stereo fields through Haas-effect processing, mid/side control and spatial EQ.
+</strong> </p>
+    
+<p>Expansive Width is a DSP plugin developed to provide intuitive control over stereo image manipulation while preserving clarity and mono compatibility. Designed as both a creative sound-design tool and practical mixing processor, it combines independent Haas-effect delays, frequency shifting, mid/side processing and spatial filtering into a single workflow for widening instruments, vocals and ambience.
 </p>
 
 </div>
@@ -54,12 +54,11 @@ A technical sound design project exploring adaptive music, interactive ambience 
     allowfullscreen>
 </iframe>
 
-<h3>Project Demonstration</h3>
+<h3>Plugin Demonstration</h3>
 
 <p>
 
-This demonstration showcases the implemented adaptive music system, dynamic ambience, environmental transitions and parameter-driven audio behaviours. The project received an overall mark of <strong>83%</strong>.
-
+This video demonstrates Expansive Width in use across a variety of audio sources, highlighting how the plugin creates width using Haas-effect delay, frequency shifting and mid/side processing. The demonstration also showcases each processing section independently before combining them into complete stereo enhancement chains suitable for mixing and sound design.
 </p>
 
 </div>
@@ -74,9 +73,19 @@ This demonstration showcases the implemented adaptive music system, dynamic ambi
 <div class="card">
 
 <p>
+Expansive Width was developed to explore practical stereo image enhancement through a clean, user-focused interface. Rather than relying on a single widening algorithm, the plugin combines multiple complementary spatial processing techniques into a modular signal chain, allowing width, depth and tonal balance to be adjusted independently.
+</p>
 
-This project was created as part of my BSc Music Technology degree and focused on designing an interactive audio system for a conceptual top-down action game. Every sound effect, ambience layer and musical element was created before being implemented in FMOD Studio using non-linear playback and gameplay-driven parameters.
+<p>
+The core widening engine is based on Haas-effect principles, using independently adjustable left and right delay times alongside subtle frequency shifting to increase perceived stereo width while maintaining a natural sound. A dedicated mid/side processing section allows the centre image to be reduced or emphasised independently of the side information, making it possible to create anything from subtle stereo enhancement to expansive, atmospheric soundscapes.
+</p>
 
+<p>
+To complement the spatial processing, the plugin also incorporates an integrated filter section featuring multiple filter types, adjustable resonance and graphical EQ control, enabling tonal shaping without requiring external plugins. A final width stage provides additional stereo positioning and output control, making Expansive Width suitable for both creative production and mix refinement.
+</p>
+
+<p>
+Throughout development, particular attention was given to workflow and usability. Parameters were grouped into logical processing stages, allowing users to understand the signal path quickly while encouraging experimentation through immediate visual feedback.
 </p>
 
 </div>
@@ -86,7 +95,7 @@ This project was created as part of my BSc Music Technology degree and focused o
 
 <section>
 
-<h2>Technical Showcase</h2>
+<h2>Key Features</h2>
 
 <div class="feature-showcase">
 
@@ -133,42 +142,36 @@ Next →
 
 <section>
 
-<h2>Development Process</h2>
+<h2>Design Process</h2>
 
 <div class="timeline">
 
 <div class="timeline-item">
 
-<h3>Planning</h3>
+<h3>DSP Design</h3>
 
 <p>
-
-Identified every required gameplay, UI, ambience and music asset before production.
-
+Researched stereo imaging techniques including Haas-effect processing, frequency shifting and mid/side manipulation before designing the plugin's signal flow.
 </p>
 
 </div>
 
 <div class="timeline-item">
 
-<h3>Sound Design</h3>
+<h3>Code Implementation</h3>
 
 <p>
-
-Produced original sound effects and adaptive musical material using Ableton Live.
-
+Developed the plugin architecture, parameter system and audio processing chain, integrating widening, EQ and stereo positioning into a unified processor.
 </p>
 
 </div>
 
 <div class="timeline-item">
 
-<h3>FMOD Implementation</h3>
+<h3>Interface Design</h3>
 
 <p>
-
-Implemented events, parameters and non-linear playback systems within FMOD Studio.
-
+Designed a streamlined user interface prioritising readability, logical control grouping and efficient workflow for both mixing and creative sound design.
 </p>
 
 </div>
@@ -178,9 +181,7 @@ Implemented events, parameters and non-linear playback systems within FMOD Studi
 <h3>Testing & Refinement</h3>
 
 <p>
-
-Balanced transitions, refined parameter behaviour and tested playback consistency.
-
+Evaluated the processor across vocals, pads, orchestral instruments and ambience, refining parameter ranges to balance creative flexibility with stable and predictable behaviour. transitions, refined parameter behaviour and tested playback consistency.
 </p>
 
 </div>
@@ -212,9 +213,7 @@ Balanced transitions, refined parameter behaviour and tested playback consistenc
 <div class="card">
 
 <p>
-
-This project significantly improved my understanding of interactive audio implementation, adaptive music systems and scalable sound design. It also reinforced the importance of planning audio architectures before implementation to create flexible systems capable of responding naturally to gameplay.
-
+Developing Expansive Width significantly strengthened my understanding of real-time digital signal processing and plugin architecture. Beyond implementing stereo widening algorithms, the project highlighted the importance of intuitive user experience, parameter design and efficient signal routing when creating professional audio software. It also reinforced how small DSP decisions—such as delay offsets, frequency shifting and mid/side balance—can have a substantial impact on perceived spatiality, giving me practical experience in translating audio engineering concepts into a functional software tool.
 </p>
 
 </div>
@@ -247,41 +246,41 @@ const slides = [
 
 {
 
-title:"Adaptive Music",
+title:"Haas Stereo Expansion",
 
 image:"images/ableton.jpg",
 
-description:"Music intensity responds dynamically to gameplay variables including player health, enemy count and progression, allowing the soundtrack to evolve naturally during play."
+description:"Independent left and right delay controls create stereo width using Haas-effect principles, while optional frequency shifting introduces additional movement and depth without relying solely on traditional delay."
 
 },
 
 {
 
-title:"Dynamic Ambience",
+title:"Mid/Side Depth Processing",
 
 image:"images/reaper.jpg",
 
-description:"Environmental ambience is built from randomised events including traffic, weather and distant emergency vehicles, reducing repetition and creating a more believable world."
+description:"Dedicated mid-channel attenuation enables precise control over centre image density, allowing the stereo field to expand naturally while maintaining control over mono compatibility and mix balance."
 
 },
 
 {
 
-title:"Environmental Transitions",
+title:"Integrated Spatial EQ",
 
 image:"images/max4live.jpg",
 
-description:"Interior and exterior environments are connected using parameter-driven filtering and seamless ambience transitions."
+description:"A built-in graphical EQ provides multiple filter types with adjustable frequency, resonance and gain, allowing tonal shaping to work alongside stereo enhancement within a single processing chain."
 
 },
 
 {
 
-title:"FMOD Implementation",
+title:"Intuitive User Interface",
 
 image:"images/fmod.png",
 
-description:"The entire audio system was implemented in FMOD Studio using event hierarchies, parameters and non-linear playback techniques."
+description:"The interface was designed around a logical signal flow, grouping related controls into clearly defined sections that encourage fast experimentation while remaining accessible to users with varying levels of production experience."
 
 }
 
